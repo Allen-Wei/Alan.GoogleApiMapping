@@ -16,7 +16,7 @@
 192.168.11.80是你的IP地址.
 
 2 将项目clone下来然后发布到IIS里，绑定域名
-[!IIS]()
+![IIS](https://raw.githubusercontent.com/Allen-Wei/Alan.GoogleApiMapping/master/Images/iis_config.png)
 
 3 修改映射文件, 映射文件位于 `~/App_Data/mapping.json`.
 
