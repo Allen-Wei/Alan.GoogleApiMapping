@@ -14,9 +14,8 @@ namespace Alan.GoogleApiMapping.Configurations
 
         public List<ConfigMap> Match(HttpRequest request)
         {
-            var fileName = Path.GetFileName(request.RawUrl);
             var query = from map in this.Maps
-                        where map.IsRegex ? Regex.IsMatch(request.RawUrl, map.Url, RegexOptions.IgnoreCase) : map.Url == fileName
+                        where map.IsRegex ? Regex.IsMatch(request.RawUrl, map.Url, RegexOptions.IgnoreCase) : map.Url == request.RawUrl
                         select map;
 
             return query.ToList();
